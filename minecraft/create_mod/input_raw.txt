@@ -1,0 +1,21 @@
+50	70	100	150	200	250	350	400	450	500
+clay block	bone meal	wool	sand stone	granite	calcite	diorite	any raw ore	deepslate Diamond Ore	obsidian
+cactus	coca beans	bone	wheat	terracota	dripstone block	tuff		deepslate Emerald Ore	
+sea pickle	beetroot	ink sack	prismarine crystal	andesite	cobblestone	diamond ore			
+sugar cane		charcoal	coal ore	saddle	gravel	emerald ore			
+azure bluet		coal	amethist cluster	any horse armor	copper ore	deepslate copper ore			
+blue orchid		lapis lazuli	glowstone		zinc ore	deepslate zinc ore			
+fern		lilac	amethist block		iron ore	deepslate iron ore			
+large fern		peony			gold ore	deepslate gold ore			
+allium		sunflower			redstone ore	deepslate redstone ore			
+lily of the valley		tall grass			lapis ore	deepslate lapis ore			
+rose bush		blaze rod			netherrack	nether gold ore			
+oxeye daisy						nether quarts ore			
+poppy									
+dandelion									
+cornflower									
+wither rose									
+orange tulip									
+red tulip									
+white tulip									
+pink tulip									
