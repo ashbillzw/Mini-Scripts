@@ -3,6 +3,10 @@ import time
 import pyautogui
 
 
+# 1.20- | t/summon minecraft:glow_item_frame 0 0 0 {Facing:3,Item:{id:"minecraft:filled_map",Count:1,tag:{map:0}},Tags:["mapart-temp"]}
+# 1.21+ | t/summon minecraft:glow_item_frame 0 0 0 {Facing:3,Item:{id:"minecraft:filled_map",Count:1,components:{"minecraft:map_id":0}},Tags:["mapart-temp"]}
+minecraft_1_21_newer = True
+
 coordinates = (0, 0, 0)
 facing = "north"
 dimensions = (2, 2)
@@ -34,7 +38,7 @@ for dh in range(dimensions[1]):
             ) + " {Facing:" + str({
                     "top": 0, "bottom": 1, "east": 4, "south": 2, "west": 5, "north": 3
                 }[facing]
-            ) + f",Item:{{id:\"minecraft:filled_map\",Count:1,tag:{{map:{head}}}}},Tags:[\"{tag}\"]}}"
+            ) + ",Item:{id:\"minecraft:filled_map\",Count:1," + ("components:{\"minecraft:map_id\":" if minecraft_1_21_newer else "tag:{map:") + str(head) + "}},Tags:[\"" + tag + "\"]}"
         )
         time.sleep(delay_between_step)
 
