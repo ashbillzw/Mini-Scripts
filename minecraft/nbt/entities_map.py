@@ -7,6 +7,9 @@ from PIL import Image, ImageDraw
 MIN_C = -192
 MAX_C = 192
 
+CENTER_X = 224
+CENTER_Z = -1280
+
 df = pd.read_csv("chunks.csv")
 
 def color_for(n: int):
@@ -22,6 +25,9 @@ coords = df["chunk"].map(ast.literal_eval)
 df["cx"] = coords.map(lambda t: int(t[0]))
 df["cz"] = coords.map(lambda t: int(t[1]))
 df["count"] = df["count"].astype(int)
+
+df["cx"] = df["cx"] - CENTER_X
+df["cz"] = df["cz"] - CENTER_Z
 
 df = df[df["cx"].between(MIN_C, MAX_C) & df["cz"].between(MIN_C, MAX_C)]
 df = df.groupby(["cx", "cz"], as_index=False)["count"].sum()
