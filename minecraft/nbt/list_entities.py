@@ -29,6 +29,7 @@ with open("entities.csv", "w", newline="", encoding="utf-8") as entities_file, \
                                 for n in entity["UUID"].value:
                                     uuid = uuid << 32 | n & 0xFFFFFFFF
                                 uuid = f"{uuid:032x}"
+                                uuid = f"{uuid[0:8]}-{uuid[8:12]}-{uuid[12:16]}-{uuid[16:20]}-{uuid[20:32]}"
                                 id = entity.get("id")
                                 pos = [d.value for d in entity.get("Pos")]
                                 print(uuid, id, pos)
